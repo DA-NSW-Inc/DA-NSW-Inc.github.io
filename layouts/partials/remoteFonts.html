@@ -1,0 +1,7 @@
+{{- $params := intersect (slice "a") (slice "b") -}}
+{{- range .Families -}}
+{{- $styles := delimit .styles "," -}}
+{{- $family := delimit (slice .family $styles) ":" -}}
+{{- $params = $params | append $family }}
+{{- end -}}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?{{ querify "family" (delimit $params "|") "display" .Display "subset" (delimit .Subsets ",") | safeURL }}">

@@ -1,0 +1,26 @@
+baseURL = "https://www.dawsydney.org.au"
+languageCode = "en-AU"
+title = "Data & Analytics Wednesday Sydney"
+disableHugoGeneratorInject = true
+enableGitInfo = false
+enableRobotsTXT = true
+
+[params]
+webmasterTools = "AYqF0gHpqOI17JGW42xqQU5l2OwzGkoNkDx1pTlK8U0"
+googleTagManager = "GTM-P7KHHDH"
+
+[params.remoteFonts]
+display = "fallback"
+subsets = ["latin", "latin-ext"]
+
+[[params.remoteFonts.families]]
+family = "Quattrocento"
+styles = ["400", "700"]
+
+[[params.remoteFonts.families]]
+family = "Quattrocento Sans"
+styles = ["400", "700", "400italic", "700italic"]
+
+[[params.remoteFonts.families]]
+family = "Open Sans"
+styles = ["300", "400", "700", "300italic", "400italic", "700italic"]

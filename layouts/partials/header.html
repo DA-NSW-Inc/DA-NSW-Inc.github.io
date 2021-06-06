@@ -1,0 +1,12 @@
+{{- $logo := resources.Get "images/logo_with_text.png" -}}
+<header>
+    <a class="logo" href="{{ .Site.Home.RelPermalink }}"><img alt="{{ .Site.Title }} logo" src="{{ $logo.RelPermalink }}" /></a>
+    </header>
+<nav>
+    <ul>
+        {{ range .Site.Menus.main }}
+            <li{{ if $.IsMenuCurrent .Menu . }} class="active"{{ end }}>
+                <a href="{{ .URL }}">{{ .Name | title }}</a>
+            {{ end }}
+        </ul>
+    </nav>
